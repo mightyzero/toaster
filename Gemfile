@@ -43,3 +43,10 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# Use Devise to help with user authentication (register, login, logout, recover passwords)
+# See: https://github.com/plataformatec/devise/wiki
+gem 'devise'
+
+# Use Pundit for authorization (access control on data)
+gem 'pundit'
