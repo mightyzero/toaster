@@ -10,10 +10,10 @@ class CreateUsers < ActiveRecord::Migration
       t.string :address_line_1
       t.string :address_line_2
       t.string :city
-      t.text :state
-      t.text :zip
-      t.text :country
-      t.text :email
+      t.string :state
+      t.string :zip
+      t.string :country
+      t.string :email
       t.references :phone_numbers, index: true
 
       t.timestamps
