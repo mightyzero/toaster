@@ -1,4 +1,21 @@
 Toaster::Application.routes.draw do
+  # Generate routes for user authentication using Devise gem.
+  # Routes are based on devise options in the User model.
+  devise_for :users, skip: [:sessions, :registrations]
+
+  # Configure routes for user authentication
+  devise_scope :user do
+    # Registration routes
+    get "register", to: "devise/registrations#new", as: :new_user_registration
+    post "register", to: "devise/registrations#create", as: :user_registration
+
+    # Login routes
+    get "login", to: "devise/sessions#new", as: :new_user_session
+    post "login", to: "devise/sessions#create", as: :user_session
+    delete "logout", to: "devise/sessions#destroy", as: :destroy_user_session
+  end
+
+
   get "pages/home"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

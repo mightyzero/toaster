@@ -13,7 +13,6 @@ class CreateUsers < ActiveRecord::Migration
       t.string :state
       t.string :zip
       t.string :country
-      t.string :email
       t.references :phone_numbers, index: true
 
       t.timestamps
