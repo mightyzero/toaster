@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.2'
 
 # Explicitly require rake to avoid version conflict
-gem 'rake'
+gem 'rake', '>= 10.4.0'
 
 # Use SQLite 3 as the development database (easy to use)
 group :development do
