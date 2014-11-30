@@ -3,14 +3,19 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
+# Use SQLite 3 as the development database (easy to use)
 group :development do
 	gem 'sqlite3'
 end
 
-group :test, :production do 
+# Use PostGreSQL as the deployment database (Heroku uses PostGreSQL)
+group :test, :production do
 	# Use PostGreSQL as the database for Active Record
 	gem 'pg'
 end
+
+# Use ZURB Foundation for front-end
+gem 'foundation-rails'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
