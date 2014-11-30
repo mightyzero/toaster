@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
+# Explicitly require rake to avoid version conflict
+gem 'rake'
+
 # Use SQLite 3 as the development database (easy to use)
 group :development do
 	gem 'sqlite3'
