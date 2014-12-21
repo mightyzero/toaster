@@ -1,4 +1,4 @@
 class Agenda < ActiveRecord::Base
-  belongs_to :users
-  belongs_to :roles
+  has_many :users
+  has_many :roles
 end

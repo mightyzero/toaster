@@ -1,3 +1,3 @@
 class Meeting < ActiveRecord::Base
-  belongs_to :agenda
+  has_one :agenda
 end

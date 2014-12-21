@@ -1,37 +1,37 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  ti_id: MyString
-  ti_email: MyString
-  last_name: MyString
-  first_name: MyString
-  middle_name: MyString
+  ti_id: 0001
+  ti_email: c2000216@trbvm.com
+  last_name: Yelverton
+  first_name: Patrick
+  middle_name: V
   mail_stop: MyString
-  address_line_1: MyString
+  address_line_1: 4322 Oak Street
   address_line_2: MyString
-  city: MyString
-  state: MyText
-  zip: MyText
-  country: MyText
-  email: MyText
-  home_phone_id: 
+  city: East Syracuse
+  state: NY
+  zip: 13057
+  country: USA
+  email: PatrickVYelverton@rhyta.com
+  home_phone_id: 315-382-2952
   cell_phone_id: 
   work_phone_id: 
 
 two:
-  ti_id: MyString
-  ti_email: MyString
-  last_name: MyString
-  first_name: MyString
-  middle_name: MyString
+  ti_id: 0002
+  ti_email: JulieBApplegate@rhyta.com
+  last_name: Applegate
+  first_name: Julie
+  middle_name: B
   mail_stop: MyString
-  address_line_1: MyString
+  address_line_1: 4346 Highland View Drive
   address_line_2: MyString
-  city: MyString
-  state: MyText
-  zip: MyText
-  country: MyText
-  email: MyText
+  city: Sacramento
+  state: CA
+  zip: 95814
+  country: USA
+  email: JulieBApplegate@rhyta.com
   home_phone_id: 
   cell_phone_id: 
   work_phone_id: 
