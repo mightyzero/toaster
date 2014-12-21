@@ -11,7 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141126214538) do
+ActiveRecord::Schema.define(version: 20141221182942) do
+
+  create_table "agendas", force: true do |t|
+    t.integer  "users_id"
+    t.integer  "roles_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "agendas", ["roles_id"], name: "index_agendas_on_roles_id"
+  add_index "agendas", ["users_id"], name: "index_agendas_on_users_id"
+
+  create_table "meetings", force: true do |t|
+    t.integer  "agenda_id"
+    t.string   "location"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "meetings", ["agenda_id"], name: "index_meetings_on_agenda_id"
+
+  create_table "roles", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "ti_id"
