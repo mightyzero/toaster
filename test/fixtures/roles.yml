@@ -1,22 +1,10 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-<% roles = ["Toastmaster",
-	"Invocator",
-	"Speaker 1",
-    "Speaker 2", 
-    "Speaker 3", 
-    "Speaker 4", 
-    "Topicsmaster", 
-    "General Evaluator", 
-    "Evaluator 1", 
-    "Evaluator 2", 
-    "Evaluator 3", 
-    "Evaluator 4", 
-    "Ah Counter", 
-    "Vote Counter", 
-    "Grammarian", 
-    "Time Keeper"] %>
- <% roles.each_index do |role_index| %>
-role_<%= role_index %>
-	name: <%= "roles[role_index]" %>
+<% roles = [
+    "Toastmaster", "Invocator", "Speaker", "Topicsmaster",
+    "General Evaluator", "Evaluator", "Ah Counter", "Vote Counter",
+    "Grammarian", "Time Keeper" ] %>
+<% roles.each_index do |role_index| %>
+role_<%= role_index %>:
+  name: <%= roles[role_index] %>
 <% end %>

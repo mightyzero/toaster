@@ -14,9 +14,7 @@ one:
   zip: 13057
   country: USA
   email: PatrickVYelverton@rhyta.com
-  home_phone_id: 315-382-2952
-  cell_phone_id: 
-  work_phone_id: 
+  phone_numbers_id:
 
 two:
   ti_id: 0002
@@ -32,6 +30,4 @@ two:
   zip: 95814
   country: USA
   email: JulieBApplegate@rhyta.com
-  home_phone_id: 
-  cell_phone_id: 
-  work_phone_id: 
+  phone_numbers_id:
