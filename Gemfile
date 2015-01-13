@@ -64,3 +64,6 @@ gem 'devise'
 
 # Use Pundit for authorization (access control on data)
 gem 'pundit'
+
+# Use ZURB foundation icon pack
+gem 'foundation-icons-sass-rails'
