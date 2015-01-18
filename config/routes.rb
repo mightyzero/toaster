@@ -15,8 +15,6 @@ Toaster::Application.routes.draw do
     delete "logout", to: "devise/sessions#destroy", as: :destroy_user_session
   end
 
-
-  get "pages/home"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -25,6 +23,7 @@ Toaster::Application.routes.draw do
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
+  get 'dashboard' => 'pages#dashboard'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
