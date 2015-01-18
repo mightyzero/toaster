@@ -1,2 +1,111 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<nav class="top-bar" data-topbar role="navigation">
+	<ul class="title-area">
+		<li class="name">	<h1><a href="/">Toaster</a></h1> </li>
+		<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+		<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+	</ul>
+	<section class="top-bar-section" style="left: 0%;">
+		<!-- Right Nav Section: Desktop -->
+		<ul class="right show-for-large-up">
+			<li class="active"><a class="tiny round button" data-reveal-id="loginBox">Log In</a></li>
+		</ul>
+		<!-- Right Nav Section: Mobile -->
+		<ul class="right hide-for-large-up">
+			<li class="active"><a class="text-center" data-reveal-id="loginBox">Log In</a></li>
+		</ul>
+	</section>
+</nav>
+<div id="loginBox" class="small reveal-modal" data-reveal>
+	<div class="row">
+		<div class="small-12 columns">
+		<%= form_for(:user, :url => session_path(:user)) do |f| %>
+		  <%= f.text_field     :email,    :placeholder => "email address" %>
+		  <%= f.password_field :password, :placeholder => "password" %>
+		  <%= f.check_box      :remember_me %>
+		  <%= f.label          :remember_me %>
+		  <div class="clearfix">
+		  	<%= link_to "Forgot your password?", new_password_path(:user), :class => "left" %>
+		  	<%= f.submit 'Sign in', :class => "right tiny round button" %>
+	  	</div>
+		<% end %>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="large-12 columns">
+		<img src="http://placehold.it/1000x500&text=[banner img]">
+	</div>
+</div>
+<div class="row">
+	<hr>
+	<div class="large-8 columns">
+		<h4>About</h4>
+		<p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.</p>
+		<i class="fi-social-twitter"></i>
+	</div>
+	<div class="large-4 columns">
+		<img src="http://placehold.it/400x300&text=[img]">
+	</div>
+</div>
+<div class="row">
+	<hr>
+	<div class="large-12 columns">
+		<h4>Work</h4>
+		<p>Click on each image!</p>
+		<ul class="clearing-thumbs small-block-grid-1 medium-block-grid-2 large-block-grid-4" data-clearing>
+			<li>
+				<a href="http://placehold.it/800x500&text=[img]">
+				<img data-caption="caption here..." src="http://placehold.it/800x500&text=[img]"></a>
+			</li>
+			<li>
+				<a href="http://placehold.it/800x500&text=[img]"><img data-caption="caption 2 here..." src="http://placehold.it/800x500&text=[img]"></a>
+			</li>
+			<li>
+				<a href="http://placehold.it/800x500&text=[img]"><img data-caption="caption 3 here..." src="http://placehold.it/800x500&text=[img]"></a>
+			</li>
+			<li>
+				<a href="http://placehold.it/800x500&text=[img]"><img data-caption="caption 4 here..." src="http://placehold.it/800x500&text=[img]"></a>
+			</li>
+			<li>
+				<a href="http://placehold.it/800x500&text=[img]"><img data-caption="caption 5 here..." src="http://placehold.it/800x500&text=[img]"></a>
+			</li>
+			<li>
+				<a href="http://placehold.it/800x500&text=[img]"><img data-caption="caption 6 here..." src="http://placehold.it/800x500&text=[img]"></a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="row">
+	<div class="large-12 columns">
+		<hr>
+		<h4>Contact Me</h4>
+		<div class="large-4 columns">
+			Email: <a class="__cf_email__" href="/cdn-cgi/l/email-protection" data-cfemail="6b060e2b06121b04191f0d0407020445080406">[email protected]</a><script cf-hash='f9e31' type="text/javascript">
+			/* <![CDATA[ */!function(){try{var t="currentScript"in document?document.currentScript:function(){for(var t=document.getElementsByTagName("script"),e=t.length;e--;)if(t[e].getAttribute("cf-hash"))return t[e]}();if(t&&t.previousSibling){var e,r,n,i,c=t.previousSibling,a=c.getAttribute("data-cfemail");if(a){for(e="",r=parseInt(a.substr(0,2),16),n=2;a.length-n;n+=2)i=parseInt(a.substr(n,2),16)^r,e+=String.fromCharCode(i);e=document.createTextNode(e),c.parentNode.replaceChild(e,c)}}}catch(u){}}();/* ]]> */</script>
+		</div>
+		<div class="large-4 columns">
+			Twitter: @twitterhandle
+		</div>
+		<div class="large-4 columns">
+			Phone: 555-555-1234
+		</div>
+	</div>
+</div>
+<footer class="row">
+	<div class="large-12 columns">
+		<hr/>
+		<div class="row">
+			<div class="large-6 columns">
+				<p>© Copyright no one at all. Go to town.</p>
+			</div>
+			<div class="large-6 columns">
+				<ul class="inline-list right">
+					<li><a href="#">Link 1</a></li>
+					<li><a href="#">Link 2</a></li>
+					<li><a href="#">Link 3</a></li>
+					<li><a href="#">Link 4</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
