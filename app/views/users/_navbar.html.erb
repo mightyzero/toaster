@@ -1,0 +1,22 @@
+<%# This partial renders the top navigation bar for internal pages. %>
+<nav class="top-bar" data-topbar role="navigation">
+	<ul class="title-area">
+		<li class="name">	<h1><a href="/">Toaster</a></h1> </li>
+		<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+		<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+	</ul>
+	<section class="top-bar-section" style="left: 0%;">
+		<!-- Right Nav Section: Desktop -->
+		<ul class="right show-for-large-up">
+			<li><a class="">Profile</a></li>
+			<li><a class="">Agenda</a></li>
+			<li><%= link_to("Logout", destroy_user_session_path, :method => :delete) %></li>
+		</ul>
+		<!-- Right Nav Section: Mobile -->
+		<ul class="right hide-for-large-up">
+			<li><a class="text-center">Profile</a></li>
+			<li><a class="text-center">Agenda</a></li>
+			<li><%= link_to("Logout", destroy_user_session_path, :method => :delete, :class => "text-center") %></li>
+		</ul>
+	</section>
+</nav>

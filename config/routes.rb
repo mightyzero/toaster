@@ -1,4 +1,5 @@
 Toaster::Application.routes.draw do
+  get "user_controller/dashboard"
   # Generate routes for user authentication using Devise gem.
   # Routes are based on devise options in the User model.
   devise_for :users, skip: [:sessions, :registrations]
@@ -23,7 +24,7 @@ Toaster::Application.routes.draw do
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-  get 'dashboard' => 'pages#dashboard'
+  get 'dashboard' => 'users#dashboard'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

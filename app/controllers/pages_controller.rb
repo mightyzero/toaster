@@ -4,7 +4,4 @@ class PagesController < ApplicationController
 			redirect_to dashboard_url
 		end
 	end
-
-	def dashboard
-	end
 end
