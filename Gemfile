@@ -6,17 +6,6 @@ gem 'rails', '4.0.2'
 # Explicitly require rake to avoid version conflict
 gem 'rake', '>= 10.4.0'
 
-# Use SQLite 3 as the development database (easy to use)
-group :development do
-	gem 'sqlite3'
-end
-
-# Use PostGreSQL as the deployment database (Heroku uses PostGreSQL)
-group :test, :production do
-	# Use PostGreSQL as the database for Active Record
-	gem 'pg'
-end
-
 # Use ZURB Foundation for front-end
 gem 'foundation-rails'
 
@@ -41,11 +30,6 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
-end
-
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
@@ -67,3 +51,18 @@ gem 'pundit'
 
 # Use ZURB foundation icon pack
 gem 'foundation-icons-sass-rails'
+
+group :doc do
+  # bundle exec rake doc:rails generates the API under doc/api.
+  gem 'sdoc', require: false
+end
+
+group :development do
+	# Use SQLite 3 as the development database (easy to use)
+	gem 'sqlite3'
+end
+
+group :test, :production do
+	# Use PostGreSQL as the deployment database (Heroku uses PostGreSQL)
+	gem 'pg'
+end
