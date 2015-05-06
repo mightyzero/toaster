@@ -60,6 +60,9 @@ end
 group :development do
 	# Use SQLite 3 as the development database (easy to use)
 	gem 'sqlite3'
+
+	# Use RSpec for testing under development
+	get 'rspec' '~> 3.0'
 end
 
 group :test, :production do
